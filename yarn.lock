@@ -3557,11 +3557,6 @@ miller-rabin@^4.0.0:
     bn.js "^4.0.0"
     brorand "^1.0.1"
 
-mime@^2.3.1:
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/mime/-/mime-2.4.4.tgz#bd7b91135fc6b01cde3e9bae33d659b63d8857e5"
-  integrity sha512-LRxmNwziLPT828z+4YkNzloCFC2YM4wrB99k+AV5ZbEyfGNWfG8SO1FUXLmLDBSo89NrJZ4DIWeLjy1CHGhMGA==
-
 mimic-fn@^1.0.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.2.0.tgz#820c86a39334640e99516928bd03fca88057d022"
@@ -4140,6 +4135,11 @@ package-json@^4.0.0:
     registry-url "^3.0.3"
     semver "^5.1.0"
 
+pako@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.3.tgz#5f515b0c6722e1982920ae8005eacb0b7ca73ccf"
+  integrity sha1-X1FbDGci4ZgpIK6ABerLC3ynPM8=
+
 pako@~1.0.5:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.10.tgz#4328badb5086a426aa90f541977d4955da5c9732"
@@ -4330,6 +4330,14 @@ pkg-up@^2.0.0:
   integrity sha1-yBmscoBZpGHKscOImivjxJoATX8=
   dependencies:
     find-up "^2.1.0"
+
+plantuml-encoder@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/plantuml-encoder/-/plantuml-encoder-1.2.5.tgz#6b8e5b9e1a1dbd88b3fd9fb46f734eec7d44b548"
+  integrity sha512-viV7Sz+BJNX/sC3iyebh2VfLyAZKuu3+JuBs2ISms8+zoTGwPqwk3/WEDw/zROmGAJ/xD4sNd8zsBw/YmTo7ng==
+  dependencies:
+    pako "1.0.3"
+    utf8-bytes "0.0.1"
 
 plur@^2.1.2:
   version "2.1.2"
@@ -6634,6 +6642,11 @@ use@^3.1.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
   integrity sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ==
+
+utf8-bytes@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/utf8-bytes/-/utf8-bytes-0.0.1.tgz#116b025448c9b500081cdfbf1f4d6c6c37d8837d"
+  integrity sha1-EWsCVEjJtQAIHN+/H01sbDfYg30=
 
 util-deprecate@~1.0.1:
   version "1.0.2"

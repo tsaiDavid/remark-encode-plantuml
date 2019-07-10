@@ -2,12 +2,13 @@
 
 var fs = require('fs')
 var path = require('path')
-var mimes = require('mime/lite')
 var visit = require('unist-util-visit')
+var plantumlEncoder = require('plantuml-encoder')
 
 module.exports = encodePlantuml
 
 var relative = /^\.{1,2}\//
+var pumlExtension = /([a-zA-Z0-9\s_\\.\-\(\):])+(.puml|.plantuml)$/
 
 function encodePlantuml() {
   return transformer
@@ -27,21 +28,19 @@ function transformer(tree, file, done) {
 
     if (url && relative.test(url)) {
       count++
-      fs.readFile(path.resolve(file.cwd, file.dirname, url), 'base64', one)
+      fs.readFile(path.resolve(file.cwd, file.dirname, url), 'utf8', one)
     }
 
     function one(err, data) {
-      var mime
-
       if (err) {
         count = Infinity
         return done(err)
       }
 
-      mime = mimes.getType(path.extname(url))
+      var encodedPuml = plantumlEncoder.encode(data)
 
-      if (mime) {
-        node.url = 'data:' + mime + ';base64,' + data
+      if (pumlExtension.test(url)) {
+        node.url = 'https://www.plantuml.com/plantuml/svg/' + encodedPuml
       }
 
       if (--count === 0) {

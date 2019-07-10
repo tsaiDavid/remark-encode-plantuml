@@ -7,7 +7,7 @@
   "author": "David Tsai <david@matternet.us>",
   "license": "MIT",
   "dependencies": {
-    "mime": "^2.3.1",
+    "plantuml-encoder": "^1.2.5",
     "unist-util-visit": "^1.0.0"
   },
   "devDependencies": {
