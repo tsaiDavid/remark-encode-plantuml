@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "plantuml encoder for remark.js",
   "main": "index.js",
-  "repository": "git@github.com:tsaiDavid/remark-encode-plantuml.git",
-  "author": "David Tsai <david@matternet.us>",
+  "repository": "https://github.com/tsaiDavid/remark-encode-plantuml",
+  "author": "David Tsai <david@whataniceguy.com>",
   "license": "MIT",
   "dependencies": {
     "plantuml-encoder": "^1.2.5",
@@ -17,7 +17,6 @@
     "remark": "^10.0.0",
     "remark-cli": "^6.0.0",
     "remark-html": "^9.0.0",
-    "remark-preset-wooorm": "^5.0.0",
     "tape": "^4.0.0",
     "tinyify": "^2.0.0",
     "to-vfile": "^6.0.0",
@@ -49,10 +48,5 @@
   "xo": {
     "prettier": true,
     "esnext": false
-  },
-  "remarkConfig": {
-    "plugins": [
-      "preset-wooorm"
-    ]
   }
 }
