@@ -7,7 +7,7 @@ var vfile = require('to-vfile')
 var encodePlantuml = require('..')
 
 test('remark-encode-plantuml', function(t) {
-  t.plan(1)
+  t.plan(2)
 
   remark()
     .use(encodePlantuml)
@@ -16,6 +16,16 @@ test('remark-encode-plantuml', function(t) {
         [err, String(file)],
         [null, String(read('foo-result.md')).replace(/\r\n/g, '\n')],
         'should transform and inline encoded plantuml'
+      )
+    })
+
+  remark()
+    .use(encodePlantuml)
+    .process(read('nested/deeplyNested/baz.md'), function(err, file) {
+      t.deepEqual(
+        [err, String(file)],
+        [null, String(read('baz-result.md')).replace(/\r\n/g, '\n')],
+        'should handle nested relative paths'
       )
     })
 })
