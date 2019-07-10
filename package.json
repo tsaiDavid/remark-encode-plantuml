@@ -1,6 +1,6 @@
 {
   "name": "remark-encode-plantuml",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "plantuml encoder for remark.js",
   "main": "index.js",
   "repository": "git@github.com:tsaiDavid/remark-encode-plantuml.git",
